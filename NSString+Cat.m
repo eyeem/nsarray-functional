@@ -76,7 +76,7 @@
 }
 
 - (NSString *)stringRepresentationForULong:(unsigned long)aULong {
-	return [NSString stringWithFormat:@"%d", aULong];
+	return [NSString stringWithFormat:@"%ld", aULong];
 }
 
 - (NSString *)stringRepresentationForULongLong:(unsigned long long)aULongLong {
@@ -84,7 +84,7 @@
 }
 
 - (NSString *)stringRepresentationForCharPtr:(long long)aCharPtr {
-	return [NSString stringWithFormat:@"%s", aCharPtr];
+	return [NSString stringWithFormat:@"%lld", aCharPtr];
 }
 
 - (NSString *)stringRepresentationForObject:(id)anObject {
@@ -96,11 +96,11 @@
 }
 
 - (NSString *)stringRepresentationForNSInteger:(NSInteger)aNSInteger {
-	return [NSString stringWithFormat:@"%ld", aNSInteger];
+	return [NSString stringWithFormat:@"%d", aNSInteger];
 }
 
 - (NSString *)stringRepresentationForNSUInteger:(NSUInteger)aNSUInteger {
-	return [NSString stringWithFormat:@"%lu", aNSUInteger];
+	return [NSString stringWithFormat:@"%u", aNSUInteger];
 }
 
 - (NSString *)stringRepresentationForCGFloat:(CGFloat)aCGFloat {
