@@ -96,11 +96,11 @@
 }
 
 - (NSString *)stringRepresentationForNSInteger:(NSInteger)aNSInteger {
-	return [NSString stringWithFormat:@"%d", aNSInteger];
+	return [NSString stringWithFormat:@"%ld", (long)aNSInteger];
 }
 
 - (NSString *)stringRepresentationForNSUInteger:(NSUInteger)aNSUInteger {
-	return [NSString stringWithFormat:@"%u", aNSUInteger];
+	return [NSString stringWithFormat:@"%lu", (unsigned long)aNSUInteger];
 }
 
 - (NSString *)stringRepresentationForCGFloat:(CGFloat)aCGFloat {
