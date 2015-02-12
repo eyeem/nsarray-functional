@@ -60,7 +60,10 @@
 	
 	int i;
 	for(i = 1; i < [self count]; i++) {
-		result = [result performSelector:aSelector withObject:[self objectAtIndex:i]];
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Warc-performSelector-leaks"
+    result = [result performSelector:aSelector withObject:[self objectAtIndex:i]];
+#pragma clang diagnostic pop
 	}
 	
 	return result;
